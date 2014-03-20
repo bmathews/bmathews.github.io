@@ -1,0 +1,34 @@
+
+<div style="">
+    <div style="margin-right: 100px; float: left; width: 460px;">
+        <h1 class="text-center">Design</h1>
+        <!-- <h4>Dribbble Shots</h4> -->
+        <ul class="list-unstyled">
+            <li class="dribbble-shot" ng-repeat="shot in dribbbleShots.shots">
+                <div class="dribbble-image-holder">
+                    <!-- <img class="dribbble-image" ng-src="{{ shot.image_400_url }}"></img> -->
+                    <img class="dribbble-image" ng-src="{{ shot.image_teaser_url}}"></img>
+                    <span class="dribbble-title">{{ shot.title }}</span>
+                </div>
+                <div class="dribbble-meta">
+                    <span>V: {{ shot.views_count | number }}</span>
+                    <span>C: {{ shot.comments_count | number }}</span>
+                    <span>L: {{ shot.likes_count | number }}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div style="float: left; width: 460px;">
+        <h1 class="text-center">Development</h1>
+        <!-- <h4>Github Repos</h4> -->
+        <ul class="list-unstyled">
+            <li class="github-repo" ng-repeat="repo in githubRepos">
+                <span class="github-name">{{ repo.name }}</span>
+                <span class="github-description">{{ repo.description }}</span>
+                <span> Watchers: {{ repo.watchers_count }}</span>
+                <span> Forks: {{ repo.forks_count }}</span>
+                <span> Issues: {{ repo.open_issues_count }}</span>
+            </li>
+        </ul>
+    </div>
+</div>
